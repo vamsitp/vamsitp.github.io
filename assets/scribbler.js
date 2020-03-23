@@ -106,10 +106,6 @@ window.addEventListener("load", function () {
     }
 });
 
-//in page scrolling for documentaiton page
-var btns = getAll('.js-btn');
-var sections = getAll('.js-section');
-
 function setActiveLink(event) {
     // remove all active tab classes
     for (var i = 0; i < btns.length; i++) {
@@ -126,29 +122,6 @@ function smoothScrollTo(element, event) {
         'behavior': 'smooth',
         'top': element.offsetTop - 20,
         'left': 0
-    });
-}
-
-if (btns.length && sections.length > 0) {
-    // for (var i = 0; i<btns.length; i++) {
-    //   btns[i].addEventListener('click', function(event) {
-    //     smoothScrollTo(sections[i], event);
-    //   });
-    // }
-    btns[0].addEventListener('click', function (event) {
-        smoothScrollTo(sections[0], event);
-    });
-
-    btns[1].addEventListener('click', function (event) {
-        smoothScrollTo(sections[1], event);
-    });
-
-    btns[2].addEventListener('click', function (event) {
-        smoothScrollTo(sections[2], event);
-    });
-
-    btns[3].addEventListener('click', function (event) {
-        smoothScrollTo(sections[3], event);
     });
 }
 
